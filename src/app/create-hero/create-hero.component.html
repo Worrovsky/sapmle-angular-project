@@ -1,0 +1,45 @@
+<form #superheroForm="ngForm" class="h-full">
+  <div class="flex flex-col h-full justify-center items-center">
+    <mat-form-field appearance="outline" class="w-5/12">
+      <mat-label>Superhero Name</mat-label>
+      <input
+        type="text"
+        [(ngModel)]="superhero.name"
+        name="name"
+        required
+        minlength="4"
+        matInput
+        placeholder="Enter name"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-5/12">
+      <mat-label>Country</mat-label>
+      <mat-select [(ngModel)]="superhero.country" name="country" required>
+        <mat-option>None</mat-option>
+        <mat-option value="in">India</mat-option>
+        <mat-option value="fra">France</mat-option>
+        <mat-option value="ca">Canada</mat-option>
+        <mat-option value="us" disabled>United States</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="w-5/12">
+      <mat-label>Birthday</mat-label>
+      <input
+        type="date"
+        matInput
+        required
+        [(ngModel)]="superhero.birthday"
+        name="birthday"
+      />
+    </mat-form-field>
+    <div class="flex space-x-2">
+      <button mat-raised-button color="warn" (click)="onCancel()">
+        Cancel
+      </button>
+      <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+    </div>
+  </div>
+
+  <div></div>
+</form>

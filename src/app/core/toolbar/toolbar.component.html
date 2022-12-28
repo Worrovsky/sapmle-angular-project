@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <button
+    (click)="toggleForMenuClick()"
+    mat-icon-button
+    aria-label="Example icon-button with menu icon"
+    matTooltip="Ctrl + B"
+    matTooltipPosition="below"
+    matTooltipShowDelay="1000"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="text-2xl">Heroes Tour</span>
+  <span class="flex-auto"></span>
+  <a class="px-2" routerLink="/heroes">View</a>
+  <a class="px-2" routerLink="/create">Create</a>
+</mat-toolbar>

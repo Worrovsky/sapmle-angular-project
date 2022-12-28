@@ -1,0 +1,12 @@
+<div class="p-4 space-y-4 flex flex-col items-center">
+  <mat-card *ngFor="let hero of heroes" class="w-full sm:w-8/12 md:w-6/12">
+    <mat-card-header>
+      <mat-card-title>{{ hero.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Country: {{ hero.country }}</p>
+      <mat-divider></mat-divider>
+      <p>Birthday: {{ hero.birthday }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
